@@ -5,7 +5,7 @@ We will use cout to print to the window.
 
 INPUT: None
 PROCESSING: None
-OUTPUT: The user's name as a greeting
+OUTPUT: A friendly greeting
 */
 
 // magic words we will explain later
