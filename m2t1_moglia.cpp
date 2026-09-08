@@ -1,45 +1,51 @@
 /*
-M2T1 - The Apple Orchard (with cin)
+M2T1 - Product Sales (The Apple Orchard with cin)
 This is the Apple Sales program from M1LAB again, but this time
-the user types in the name, number of apples, and price per apple
-using cin instead of having the values hard coded.
+the user types in their name and how many apples they want using
+cin instead of having the values hard coded.
 
-INPUT: name, number of apples, price per apple
+INPUT: first name, last name, number of apples
 PROCESSING: total cost = number of apples * price per apple
-OUTPUT: A welcome message, the apples in stock, the price each, and the total
+OUTPUT: A greeting, the order, and the total cost to 2 decimal places
 */
 
 #include <iostream>
+#include <iomanip>  // for setprecision - keeps prices at 2 decimal places
 #include <string>
 using namespace std;
 
 int main() {
 
-    // variables - empty for now, the user fills them in
-    string name;
-    int num_apples;
-    double cost_each;
+    // set up all the variables
+    string first_name, last_name, full_name;  // holds the customer name
+    string product = "apples";  // change to whatever you like
+    int amount_purchased;
+    double cost_each = 0.99;
+    double total_cost;
 
-    // ask the user for each value, then wait for the answer
-    cout << "Please enter your name: ";
-    cin >> name;
+    // greet the customer
+    cout << "Welcome to our " << product << " store!" << endl;
+    cout << "What's your first name? ";
+    cin >> first_name;
+    cout << "What's your last name? ";
+    cin >> last_name;
+    full_name = first_name + " " + last_name;
+    cout << "Nice to meet you, " << full_name << endl;
 
-    cout << "How many apples are in stock? ";
-    cin >> num_apples;
+    // ask how much they'd like to purchase
+    cout << "How many " << product << " would you like today? ";
+    cin >> amount_purchased;
 
-    cout << "How much does each apple cost? $";
-    cin >> cost_each;
-    cout << endl;
+    // calculate total price
+    total_cost = amount_purchased * cost_each;
 
-    // same output as before, just with what the user typed in
-    cout << "Welcome to the " << name << " apple farm!" << endl;
-    cout << "There are " << num_apples << " apples in stock." << endl;
-    cout << "They cost $" << cost_each << " each." << endl;
+    // formatting - set all prices to 2 decimal places
+    cout << setprecision(2) << fixed;
 
-    // find out the total price
-    double total_cost = num_apples * cost_each;
-    cout << "The price for all of them is: $" << total_cost << endl;
+    // give the result
+    cout << "For " << amount_purchased << " " << product << endl;
+    cout << "That will be: $" << total_cost << endl;
+    cout << "Thank you for shopping with us!" << endl;
 
-    cout << endl;
     return 0; // no errors
 }
