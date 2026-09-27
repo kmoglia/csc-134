@@ -6,31 +6,39 @@ Katherine Moglia
 */
 
 #include <iostream>
-#include <iomanip>
+#include <iomanip> // for setprecision - keeps prices at 2 decimal places
+#include <string>
 using namespace std;
 
 int main() {
-    // Declare variables
-    double meal_price = 5.99;
-    double tax_percent = 0.08;   // 8% tax
-    double tax_amount;
-    double total;
+// Purpose - print a simple receipt for one meal
+// that also adds 8% sales tax
 
-    // Calculate the values
-    tax_amount = meal_price * tax_percent;
-    total = meal_price + tax_amount;
+// Declare our variables
+string item = "Chicken Tenders";
+double meal_price = 5.99;
+double tax_percent = 0.08; // 8% is 8/100
+double tax_amount; // tax in $
+double total; // meal price + tax
 
-    // Print the results
-    cout << fixed << setprecision(2);
-    cout << "========================" << endl;
-    cout << "    Restaurant Receipt  " << endl;
-    cout << "========================" << endl;
-    cout << "Meal Price: $" << meal_price << endl;
-    cout << "Tax (8%):   $" << tax_amount << endl;
-    cout << "------------------------" << endl;
-    cout << "Total:      $" << total << endl;
-    cout << "========================" << endl;
-    cout << "Thank you, come again!" << endl;
+// Greet the customer and take the order
+cout << "Welcome to the CSC 134 Cafe!" << endl;
+cout << "You ordered one " << item << "." << endl;
 
-    return 0;
+// Calculate the sales tax and the total price
+tax_amount = meal_price * tax_percent; // 8% of the meal
+total = meal_price + tax_amount;
+
+// Print the receipt
+cout << setprecision(2) << fixed;
+cout << endl;
+cout << "------------------------------" << endl;
+cout << item << "\t$" << meal_price << endl;
+cout << "Tax (8%)" << "\t$" << tax_amount << endl;
+cout << "------------------------------" << endl;
+cout << "Total" << "\t\t$" << total << endl;
+cout << endl;
+cout << "Thanks for eating with us!" << endl;
+
+return 0; // no errors
 }
