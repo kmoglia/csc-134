@@ -59,5 +59,51 @@ int main() {
     cout << "Final account balance: $" << finalBalance << endl;
     cout << endl;
 
+    // ==========================================================
+    // Question 2 - General Crates (Updated M2LAB1)
+    // ==========================================================
+    cout << "==============================" << endl;
+    cout << "Question 2 - General Crates" << endl;
+    cout << "==============================" << endl;
+
+    // Updated constants for cost and amount charged
+    const double COST_PER_CUBIC_FOOT = 0.30;   // was 0.23
+    const double CHARGE_PER_CUBIC_FOOT = 0.52; // was 0.5
+
+    // Variables
+    double length, // The crate's length
+    width,         // The crate's width
+    height,        // The crate's height
+    volume,        // The volume of the crate
+    cost,          // The cost to build the crate
+    charge,        // The customer charge for the crate
+    profit;        // The profit made on the crate
+
+    // Step 1 - Get the crate dimensions
+    // Prompt the user for the crate's length, width, and height
+    cout << "Enter the dimensions of the crate (in feet):\n";
+    cout << "Length: ";
+    cin >> length;
+    cout << "Width: ";
+    cin >> width;
+    cout << "Height: ";
+    cin >> height;
+
+    // Step 2 - Calculate the crate's volume, the cost to produce it,
+    // the charge to the customer, and the profit.
+    volume = length * width * height;
+    cost = volume * COST_PER_CUBIC_FOOT;
+    charge = volume * CHARGE_PER_CUBIC_FOOT;
+    profit = charge - cost;
+
+    // Step 3 - Display the calculated data.
+    cout << endl;
+    cout << "The volume of the crate is ";
+    cout << volume << " cubic feet.\n";
+    cout << "Cost to build: $" << cost << endl;
+    cout << "Charge to customer: $" << charge << endl;
+    cout << "Profit: $" << profit << endl;
+    cout << endl;
+
     return 0; // no errors
 }
