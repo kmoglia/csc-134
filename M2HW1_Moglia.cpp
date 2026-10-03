@@ -149,5 +149,33 @@ int main() {
     }
     cout << endl;
 
+    // ==========================================================
+    // Question 4 - FTCC Cheer
+    // ==========================================================
+    cout << "==============================" << endl;
+    cout << "Question 4 - FTCC Cheer" << endl;
+    cout << "==============================" << endl;
+
+    // Bonus rules: only these five string variables are used,
+    // no raw strings are printed in the cheer, and cheerOne and
+    // cheerTwo are built with string concatenation (+).
+    string letsGo, school, team, cheerOne, cheerTwo;
+
+    // Step 1 - Set the string values
+    letsGo = "Let's go ";
+    school = "FTCC";
+    team = "Trojans";
+
+    // Step 2 - Build the cheers with string concatenation
+    cheerOne = letsGo + school;
+    cheerTwo = letsGo + team;
+
+    // Step 3 - Display the cheer
+    cout << cheerOne << endl;
+    cout << cheerOne << endl;
+    cout << cheerOne << endl;
+    cout << cheerTwo << endl;
+    cout << endl;
+
     return 0; // no errors
 }
