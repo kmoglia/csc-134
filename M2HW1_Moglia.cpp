@@ -105,5 +105,49 @@ int main() {
     cout << "Profit: $" << profit << endl;
     cout << endl;
 
+    // ==========================================================
+    // Question 3 - Pizza Party
+    // ==========================================================
+    cout << "==============================" << endl;
+    cout << "Question 3 - Pizza Party" << endl;
+    cout << "==============================" << endl;
+
+    // Constant for how many slices each visitor gets
+    const int SLICES_PER_VISITOR = 3;
+
+    // Variables
+    int pizzas,          // The number of pizzas ordered
+        slicesPerPizza,  // The number of slices in each pizza
+        visitors,        // The number of visitors coming
+        totalSlices,     // The total number of slices
+        slicesEaten,     // The number of slices the visitors eat
+        leftoverSlices;  // The number of slices left over
+
+    // Step 1 - Get the party information
+    cout << "How many pizzas did you order? ";
+    cin >> pizzas;
+    cout << "How many slices per pizza? ";
+    cin >> slicesPerPizza;
+    cout << "How many visitors are coming? ";
+    cin >> visitors;
+
+    // Step 2 - Calculate the leftover slices
+    totalSlices = pizzas * slicesPerPizza;
+    slicesEaten = visitors * SLICES_PER_VISITOR;
+    leftoverSlices = totalSlices - slicesEaten;
+
+    // Step 3 - Display the results
+    cout << endl;
+    cout << "Total slices: " << totalSlices << endl;
+    cout << "Slices eaten: " << slicesEaten << endl;
+    cout << "Leftover slices: " << leftoverSlices << endl;
+
+    // Let the user know if there isn't enough pizza for everyone
+    if (leftoverSlices < 0) {
+        cout << "Not enough pizza! You are short ";
+        cout << -leftoverSlices << " slices." << endl;
+    }
+    cout << endl;
+
     return 0; // no errors
 }
