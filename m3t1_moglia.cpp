@@ -1,9 +1,9 @@
-/*
-CSC 134
-M3T1 - Area of Two Rectangles
-Katherine Moglia
-10/8/2026
-*/
+// CSC 134
+// M3T1
+// Katherine Moglia
+// 10/8/2026
+// Ask the user for the width and length of two rectangles
+// Find the area
 
 #include <iostream>
 using namespace std;
