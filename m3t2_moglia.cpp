@@ -1,5 +1,5 @@
 // CSC 134
-// M3T3
+// M3T2
 // Katherine Moglia
 // 10/17/2026
 // Craps - roll two dice and follow the flowchart
