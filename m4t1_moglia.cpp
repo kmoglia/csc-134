@@ -1,37 +1,39 @@
 // CSC 134
-// M4T1
+// M4T1 - While
 // Katherine Moglia
 // 10/25/2026
-// Program 5-3: say Hello 5 times with a while loop
-// Program 5-6: print a table of numbers and their squares
+// Part 1: say Hello five times with a while loop (Program 5-3)
+// Part 2: print a table of numbers and their squares (Program 5-6)
 
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
 
-// Part 1 - Program 5-3
-int number = 0;
+    // Part 1, just say "hi" five times
+    int count = 1;
+    while (count <= 5) {
+        cout << "Hello number " << count << endl;
+        count++; // add 1 so the loop eventually stops
+    }
+    cout << "That's all!" << endl << endl;
 
-while (number < 5) {
-    cout << "Hello\n";
-    number++;
-}
-cout << "That's all!\n\n";
+    // Part 2, numbers and their squares
+    const int MIN_NUMBER = 1;   // Starting number to square
+    const int MAX_NUMBER = 10;  // Maximum number to square
 
-// Part 2 - Program 5-6
-const int MIN_NUMBER = 1,   // Starting number to square
-          MAX_NUMBER = 10;  // Maximum number to square
+    int num = MIN_NUMBER;       // Counter
 
-int num = MIN_NUMBER;       // Counter
+    // print a table header
+    cout << "Number\tNumber Squared" << endl;
+    cout << "----------------------" << endl;
 
-cout << "Number\t\tNumber Squared\n";
-cout << "------------------------------\n";
+    while (num <= MAX_NUMBER) {
+        // start at 1 and stop at 10 because of <=
+        cout << num << "\t" << (num * num) << endl;
+        num++; // Increment the counter
+    }
 
-while (num <= MAX_NUMBER) {
-    cout << num << "\t\t" << (num * num) << endl;
-    num++; // Increment the counter
-}
-
-return 0; // no errors
+    return 0; // done
 }
